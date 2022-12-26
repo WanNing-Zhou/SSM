@@ -21,7 +21,7 @@ serverTimezone=UTC"/>
     <!--引入mybatis的映射文件 在映射文件中写sql语句-->
     <mappers>
 <!--        <package name="mappers/UserMapper.xml"/>-->
-        <mapper resource=""/>
+        <mapper resource="mappers/UserMapper.xml"/>
 
     </mappers>
 </configuration>
