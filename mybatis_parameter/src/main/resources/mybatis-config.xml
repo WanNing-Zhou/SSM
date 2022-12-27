@@ -29,6 +29,7 @@
             </dataSource>
         </environment>
     </environments>
+
     <mappers>
         <package name="com.zhouzhou.mybatis.mapper"/>
     </mappers>
