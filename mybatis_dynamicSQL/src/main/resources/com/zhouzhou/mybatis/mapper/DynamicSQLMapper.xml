@@ -15,6 +15,10 @@
             prefix:suffix:在标签种内容前或后添加指定内容
             prefixOverrides,suffixOverrides:在标签前后添加或删除指定内容
         4.choose,when,otherwise
+        相当于java中的if...else if ...else
+        when至少设置一个 otherwise最多设置一个
+
+        5.foreach 批量操作
     -->
 
     <select id="getEmpByConditionOne" resultType="Emp">
@@ -46,7 +50,7 @@
     </select>
 
 
-    <select id="getEmpByConditionThree" resultType="Emp">
+    <select id="getEmpByCondition" resultType="Emp">
         select * from t_emp
         <trim prefix="where" suffixOverrides="and" >
             <if test="empName!=null and empName!=''">
@@ -61,19 +65,22 @@
         </trim>
     </select>
 
-    <select id="getEmpByCondition" resultType="Emp">
+    <select id="getEmpByChoose" resultType="Emp">
         select * from t_emp
-        <trim prefix="where" suffixOverrides="and" >
-            <if test="empName!=null and empName!=''">
-                emp_name=#{empName}
-            </if>
-            <if test="age != null  and age !=''">
-                and age=#{age}
-            </if>
-            <if test="gender != null and gender !=''">
-                and gender=#{gender}
-            </if>
-        </trim>
+        <where>
+            <choose>
+                <when test="empName!=null and empName!=''">
+                    emp_name=#{empName}
+                </when>
+                <when test="age != null  and age !=''">
+                    age=#{age}
+                </when>
+                <when test="gender != null and gender">
+                    gender=#{gender}
+                </when>
+                <otherwise></otherwise>
+            </choose>
+        </where>
     </select>
 
 

@@ -24,4 +24,13 @@ public class DynamicSQLTest {
         System.out.println(empByCondition);
     }
 
+    @Test
+    public void testgetEmpByChoose(){
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        DynamicSQLMapper mapper = sqlSession.getMapper(DynamicSQLMapper.class);
+        Emp emp = new Emp(null,"张三",20,"");
+        List<Emp> emps = mapper.getEmpByChoose(emp);
+        System.out.println(emps);
+    }
+
 }
