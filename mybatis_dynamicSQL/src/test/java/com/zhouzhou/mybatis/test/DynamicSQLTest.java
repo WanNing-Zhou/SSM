@@ -6,6 +6,7 @@ import com.zhouzhou.mybatis.utils.SqlSessionUtil;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -31,6 +32,19 @@ public class DynamicSQLTest {
         Emp emp = new Emp(null,"张三",20,"");
         List<Emp> emps = mapper.getEmpByChoose(emp);
         System.out.println(emps);
+    }
+
+
+    @Test
+    public void testInsertMoreEmp(){
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        DynamicSQLMapper mapper = sqlSession.getMapper(DynamicSQLMapper.class);
+        Emp emp1 = new Emp(null,"小明1",20,"男");
+        Emp emp2 = new Emp(null,"小明2",20,"男");
+        Emp emp3 = new Emp(null,"小明3",20,"男");
+        List<Emp> emps = Arrays.asList(emp1, emp2, emp3);
+        mapper.insertMoreEmp(emps);
+
     }
 
 }

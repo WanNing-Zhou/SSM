@@ -25,4 +25,14 @@ public interface DynamicSQLMapper {
 
     List<Emp> getEmpByChoose( Emp emp);
 
+    /**
+     * @MethodName insertMoreEmp
+     * @Author 周万宁
+     * @Description 批量添加
+     * @Date 3:47 2022/12/30
+     * @Param [emps]
+     * @return void
+     **/
+    void insertMoreEmp(@Param("emps") List<Emp> emps);
+
 }
