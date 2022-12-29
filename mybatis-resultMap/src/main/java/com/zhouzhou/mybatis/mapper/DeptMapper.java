@@ -20,4 +20,24 @@ public interface DeptMapper {
      **/
 
     Dept getEmpAndDeptByStepTwo(@Param("deptId")Integer deptId);
+
+    /**
+     * @MethodName getDeptAndEmpByDeptId
+     * @Author 周万宁
+     * @Description 查询部门以及部门中的员工信息
+     * @Date 1:45 2022/12/30
+     * @Param [deptId]
+     * @return com.zhouzhou.mybatis.pojo.Dept
+     **/
+    Dept getDeptAndEmpByDeptId(@Param("deptId") Integer deptId);
+
+    /**
+     * @MethodName getDeptAndEmpByStepOne
+     * @Author 周万宁
+     * @Description 通过dpetid查询部门及员工的第一步
+     * @Date 2:04 2022/12/30
+     * @Param [deptId]
+     * @return com.zhouzhou.mybatis.pojo.Dept
+     **/
+    Dept getDeptAndEmpByStepOne(@Param("deptId") Integer deptId);
 }

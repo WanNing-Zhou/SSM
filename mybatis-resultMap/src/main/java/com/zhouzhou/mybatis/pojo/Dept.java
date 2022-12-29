@@ -1,5 +1,7 @@
 package com.zhouzhou.mybatis.pojo;
 
+import java.util.List;
+
 /**
  * @author 周万宁
  * @className Dept
@@ -9,16 +11,26 @@ package com.zhouzhou.mybatis.pojo;
 public class Dept {
     private Integer deptId;
     private String deptName;
-
-    public Dept() {
-    }
+    private List<Emp> emps;
 
     @Override
     public String toString() {
         return "Dept{" +
                 "deptId=" + deptId +
                 ", deptName='" + deptName + '\'' +
+                ", emps=" + emps +
                 '}';
+    }
+
+    public List<Emp> getEmps() {
+        return emps;
+    }
+
+    public void setEmps(List<Emp> emps) {
+        this.emps = emps;
+    }
+
+    public Dept() {
     }
 
     public Dept(Integer deptId, String deptName) {

@@ -3,6 +3,8 @@ package com.zhouzhou.mybatis.mapper;
 import com.zhouzhou.mybatis.pojo.Emp;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 /**
  * @author 周万宁
  * @className EmpMapper
@@ -35,4 +37,5 @@ public interface EmpMapper {
     Emp getEmpAndDeptByStepOne(@Param("empId")Integer empId);
 
 
+    List<Emp> getDeptAndEmpByStepTwo(@Param("deptId") Integer deptId);
 }
