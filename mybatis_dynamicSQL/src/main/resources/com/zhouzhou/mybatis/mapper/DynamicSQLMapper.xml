@@ -24,10 +24,16 @@
             separator:设置每次循环的数据之间的分隔符
             open:循环的所有内容以什么开始
             close:循环的所有内容以什么结束
+         6.sql片段
+         可以记录一段sql,在需要用的地方使用include标签进行引用
     -->
+    
+    <sql id="empColumns">
+        emp_id,emp_name,age,gender,dept_id
+    </sql>
 
     <select id="getEmpByConditionOne" resultType="Emp">
-        select * from t_emp where 1=1
+        select <include refid="empColumns"></include> from t_emp where 1=1
         <if test="empName!=null and empName!=''">
             and emp_name=#{empName}
         </if>

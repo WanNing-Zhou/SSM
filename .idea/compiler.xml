@@ -9,11 +9,13 @@
         <module name="mybatis_parameter" />
         <module name="mybatis_dynamicSQL" />
         <module name="mybatis_helloworld" />
+        <module name="mybatis_cache" />
         <module name="mybatis-resultMap" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="mybatis-resultMap" target="1.8" />
+      <module name="mybatis_cache" target="1.8" />
       <module name="mybatis_dynamicSQL" target="1.8" />
       <module name="mybatis_helloworld" target="1.8" />
       <module name="mybatis_parameter" target="1.8" />
