@@ -6,6 +6,13 @@
 <configuration>
 
     <properties resource="jdbc.properties"/>
+    <settings>
+        <!--将下划线设置成驼峰-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!--设置延迟加载-->
+        <setting name="lazyLoadingEnabled  " value="true"/>
+    </settings>
+
 
     <typeAliases>
         <!--
