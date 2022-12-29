@@ -47,4 +47,13 @@ public class DynamicSQLTest {
 
     }
 
+    @Test
+    public void testDeleteMoreEmp(){
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        DynamicSQLMapper mapper = sqlSession.getMapper(DynamicSQLMapper.class);
+        Integer[] empIds = new Integer[]{6,7};
+        mapper.deleteMoreEmp(empIds);
+
+    }
+
 }
