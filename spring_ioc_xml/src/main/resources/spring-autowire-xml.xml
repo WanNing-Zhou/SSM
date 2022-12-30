@@ -3,9 +3,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean class="com.zhouzhou.spring.controller.UserController"></bean>
+    <bean id="userController" class="com.zhouzhou.spring.controller.UserController" autowire="byName">
+<!--        <property name="userService" ref="userService"></property>-->
+    </bean>
 
-    <bean class="com.zhouzhou.spring.service.impl.UserServiceImpl"></bean>
+    <bean id="userService" class="com.zhouzhou.spring.service.impl.UserServiceImpl" autowire="byName">
+<!--        <property name="userDao" ref="userDao"></property>-->
+    </bean>
 
-    <bean class="com.zhouzhou.spring.dao.impl.UserDaoImpl"></bean>
+    <bean id="userDao" class="com.zhouzhou.spring.dao.impl.UserDaoImpl"></bean>
 </beans>
