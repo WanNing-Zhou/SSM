@@ -2,22 +2,18 @@
 <!DOCTYPE configuration
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
-
 <configuration>
 
     <properties resource="jdbc.properties"/>
     <settings>
         <!--将下划线设置成驼峰-->
         <setting name="mapUnderscoreToCamelCase" value="true"/>
-        <!--设置延迟加载-->
-        <setting name="lazyLoadingEnabled" value="true"/>
-
-        <!--全局加载,false为按需加载-->
-        <setting name="aggressiveLazyLoading" value="false"/>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
     </settings>
 
 
     <typeAliases>
+
         <!--
             type:设置需要起别名的类型
             alias:设置某个类型的别名
@@ -25,6 +21,11 @@
         <package name="com.zhouzhou.mybatis.pojo"/>
 
     </typeAliases>
+
+    <plugins>
+        <!--设置分页插件-->
+        <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+    </plugins>
 
 
     <environments default="development">
@@ -38,7 +39,6 @@
             </dataSource>
         </environment>
     </environments>
-
     <mappers>
         <package name="com.zhouzhou.mybatis.mapper"/>
     </mappers>
