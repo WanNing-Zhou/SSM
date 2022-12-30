@@ -1,6 +1,7 @@
 package com.zhouzhou.spring.pojo;
 
 import java.util.Arrays;
+import java.util.Map;
 
 /**
  * @author 周万宁
@@ -28,8 +29,19 @@ public class Student implements Person{
                 ", score=" + score +
                 ", clazz=" + clazz +
                 ", hobby=" + Arrays.toString(hobby) +
+                ", teacherMap=" + teacherMap +
                 '}';
     }
+
+    public Map<String, Teacher> getTeacherMap() {
+        return teacherMap;
+    }
+
+    public void setTeacherMap(Map<String, Teacher> teacherMap) {
+        this.teacherMap = teacherMap;
+    }
+
+    private Map<String,Teacher> teacherMap;
 
     public String[] getHobby() {
         return hobby;

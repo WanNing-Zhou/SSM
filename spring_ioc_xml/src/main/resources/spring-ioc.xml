@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
+
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
     <bean id="studentOne" class="com.zhouzhou.spring.pojo.Student"></bean>
     <bean id="studentTwo" class="com.zhouzhou.spring.pojo.Student">
@@ -67,6 +69,14 @@
                 <value>烫头</value>
             </array>
         </property>
+
+<!--        <property name="teacherMap">-->
+<!--            <map>-->
+<!--                <entry key="10086" value-ref="teacherOne"></entry>-->
+<!--                <entry key="10010" value-ref="teacherTwo"></entry>-->
+<!--            </map>-->
+<!--        </property>-->
+        <property name="teacherMap" ref="teacherMap"></property>
     </bean>
 
     <bean id="clazzOne" class="com.zhouzhou.spring.pojo.Clazz">
@@ -90,5 +100,21 @@
         <ref bean="studentThree"></ref>
     </util:list>
 
+    <bean id="teacherOne" class="com.zhouzhou.spring.pojo.Teacher">
+        <property name="tid" value="10086"></property>
+        <property name="tname" value="大宝"></property>
+    </bean>
+
+    <bean id="teacherTwo" class="com.zhouzhou.spring.pojo.Teacher">
+        <property name="tid" value="10010"></property>
+        <property name="tname" value="小宝"></property>
+    </bean>
+
+    <util:map id="teacherMap">
+        <entry key="10086" value-ref="teacherOne"></entry>
+        <entry key="10010" value-ref="teacherTwo"></entry>
+    </util:map>
+
+    <bean id="studentSix" class="com.zhouzhou.spring.pojo.Student" p:sid="1005" p:teacherMap-ref="teacherMap"></bean>
 
 </beans>
