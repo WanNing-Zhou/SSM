@@ -23,7 +23,11 @@ public class AutowireByXMLTest {
      *      a>若通过类型没有找到任何一个类型匹配的bean,此时不装配,属性使用默认值
      *      b>通过类型找到了多个类型匹配的bean,此时会抛出异常:noUniqueBean....
      *      总结:当使用byType实现自动装配式,IOC容器中有且只有一个类型匹配的bean嫩巩固为属性赋值
-     * byName:
+     * byName:将要赋值的属性的属性名作为bean的id在IOC容器中匹配某个bean,为属性赋值
+     *   注意:
+     *      a>若通过属名没有找到任何一个id匹配的bean,此时不装配,属性使用默认值
+     *    总结:当类型匹配的bean有多个时,此时可以使用byName实现自动装配
+     *
      */
 
     @Test
@@ -32,7 +36,5 @@ public class AutowireByXMLTest {
         UserController userController = ioc.getBean(UserController.class);
         userController.saveUser();
     }
-
-
 
 }
