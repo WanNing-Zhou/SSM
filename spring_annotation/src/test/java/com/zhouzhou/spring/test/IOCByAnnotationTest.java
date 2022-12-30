@@ -26,7 +26,11 @@ import org.springframework.stereotype.Controller;
  * c>若byType和byName的方式都无法实现自动装配,即IOC容器中有多个类型匹配的bean
  * 且这些bean的id和要赋值的属性和属性名都不一致,此时会抛出异常,nouniquebean....
  * d>此时可以在要赋值的属性上添加一个注解@Qualifier("指定bean的id")
- * 同故宫该注解的value属性值,指定某个bean的id,将这个bean为属性赋值
+ * 通过该注解的value属性值,指定某个bean的id,将这个bean为属性赋值
+ *
+ * 注意:若IOC容器中没有任何一个类型匹配的bean,此时抛出异常:nosuchbean...
+ * 在@Autowired注解中有个属性required,默认值为true,要求必须完成自动装配
+ * 可以将required设置为false,此时能装配则装配,无法装配则使用属性的默认值
  */
 public class IOCByAnnotationTest {
     @Test

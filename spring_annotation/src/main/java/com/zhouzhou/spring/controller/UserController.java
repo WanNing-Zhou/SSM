@@ -13,7 +13,8 @@ import org.springframework.stereotype.Controller;
 @Controller("controller")
 public class UserController {
 
-    @Autowired
+
+    @Autowired(required = false)
     private UserService userService;
 
     public UserService getUserService() {
