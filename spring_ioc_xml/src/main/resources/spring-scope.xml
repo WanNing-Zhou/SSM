@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="student" class="com.zhouzhou.spring.pojo.Student">
+    <bean id="student" class="com.zhouzhou.spring.pojo.Student" scope="prototype">
         <property name="sid" value="1001"></property>
         <property name="sname" value="张三"></property>
     </bean>
