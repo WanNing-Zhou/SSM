@@ -8,8 +8,21 @@
     <!--扫描组件-->
     <context:component-scan base-package="com.zhouzhou.spring.aop.xml"></context:component-scan>
     <aop:config>
+        <!--设置一个公共的切入点表达式-->
+        <aop:pointcut id="pointCut" expression="execution(* com.zhouzhou.spring.aop.xml.CalculatorImpl.*(..))"/>
         <!--将IOC容器中的某个bean设置为切面-->
-        <aop:aspect></aop:aspect>
+        <aop:aspect ref="loggerAspect">
+            <aop:before method="beforeAdviceMethod" pointcut-ref="pointCut"></aop:before>
+            <aop:after method="agterDaviceMethod" pointcut-ref="pointCut"></aop:after>
+            <aop:after-returning method="afterReturningAdviceMethod" pointcut-ref="pointCut" returning="result"></aop:after-returning>
+            <aop:after-throwing method="afterThrowingAdviceMethod" throwing="ex" pointcut-ref="pointCut"></aop:after-throwing>
+            <aop:around method="arroundAdviceMethod" pointcut-ref="pointCut"></aop:around>
+        </aop:aspect>
+
+        <aop:aspect ref="loggerAspect" order="1">
+            <aop:before method="beforeAdviceMethod" pointcut-ref="pointCut"></aop:before>
+        </aop:aspect>
+
     </aop:config>
 
 
