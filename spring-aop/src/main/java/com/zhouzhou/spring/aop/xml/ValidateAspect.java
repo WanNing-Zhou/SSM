@@ -1,4 +1,4 @@
-package com.zhouzhou.spring.aop.annotation;
+package com.zhouzhou.spring.aop.xml;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 @Order(1)
 public class ValidateAspect {
 
-    @Before("execution(* com.zhouzhou.spring.aop.annotation.CalculatorImpl.*(..))")
+    @Before("execution(* com.zhouzhou.spring.aop.xml.CalculatorImpl.*(..))")
     public void beforeMethod(){
 
     }

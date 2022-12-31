@@ -1,4 +1,4 @@
-package com.zhouzhou.spring.aop.annotation;
+package com.zhouzhou.spring.aop.xml;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -6,7 +6,6 @@ import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 /**
@@ -58,14 +57,14 @@ import java.util.Arrays;
 public class LoggerAspect {
 
 
-    @Pointcut("execution(* com.zhouzhou.spring.aop.annotation.CalculatorImpl.*(..))")
+    @Pointcut("execution(* com.zhouzhou.spring.aop.xml.CalculatorImpl.*(..))")
     public void  pointCut(){
 
     }
 
     //@Before("execution(public int com.zhouzhou.spring.aop.annotation.CalculatorImpl.add(int,int))")
 
-    @Before("execution(* com.zhouzhou.spring.aop.annotation.CalculatorImpl.*(..))")
+    @Before("execution(* com.zhouzhou.spring.aop.xml.CalculatorImpl.*(..))")
     public void beforeAdviceMethod(JoinPoint joinPoint){
         //获取连接点所对应方法的签名信息
         Signature signature = joinPoint.getSignature();
