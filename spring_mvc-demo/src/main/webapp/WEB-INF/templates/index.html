@@ -15,7 +15,8 @@
         <input type="submit" value="测试@RequestMappping注解的method属性">
     </form>
 
-
+<!--    <a th:href="@{/hello?username=admin}">测试@RequestMappping注解的param属性</a>-->
+    <a th:href="@{/hello(username='admin')}">测试@RequestMappping注解的param属性</a>
 
 </body>
 </html>
