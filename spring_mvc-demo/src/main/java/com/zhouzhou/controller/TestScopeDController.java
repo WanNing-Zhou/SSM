@@ -6,6 +6,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 /**
@@ -17,8 +19,11 @@ import java.util.Map;
  * 使用ModelAndView时,可以使用其Model功能项向请求域共享数据
  * 使用view功能功能设置逻辑视图,但是控制方法一定要将ModelView作为方法的返回值
  * 2.使用Model向请求域共享数据
- * 使用ModelMap向请求域共享数据
- *  使用map向请求域中共享数据
+ * 3使用ModelMap向请求域共享数据
+ *  4使用map向请求域中共享数据
+ *  5.Model和ModelMap和map的关系
+ *  其实在底层中,这些类型的形参最终都是通过BindingAwareModelMap创建
+ *
  */
 @Controller
 public class TestScopeDController {
@@ -57,5 +62,21 @@ public class TestScopeDController {
         model.put("testRequestScope","hello,Map");
         return "sucess";
     }
+
+    @RequestMapping("/test/session")
+    public String testSession(HttpSession session){
+        session.setAttribute("testSessiontScope","hello,Session");
+
+        return "sucess";
+    }
+
+    @RequestMapping("/test/application")
+    public String testApplivation(HttpSession session){
+        ServletContext servletContext = session.getServletContext();
+        servletContext.setAttribute("testApplicationScope","hello,Application");
+        return "sucess";
+    }
+
+
 
 }
