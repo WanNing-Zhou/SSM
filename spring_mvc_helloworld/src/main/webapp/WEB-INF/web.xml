@@ -20,7 +20,8 @@
             <param-name>contextConfigLocation</param-name>
             <param-value>classpath:springmvc.xml</param-value>
         </init-param>
-        <load-on-startup></load-on-startup>
+        <!--将DispatcherServlet的初始化事件提前到服务器启动时-->
+        <load-on-startup>1</load-on-startup>
     </servlet>
 
     <!--
