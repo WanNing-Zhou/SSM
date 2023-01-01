@@ -15,11 +15,14 @@ public class TestViewController {
     @RequestMapping("/test/view/thymeleaf")
     public  String testThymeleafView(){
 
-
-        
         return "success";
     }
 
+    @RequestMapping("/test/view/forward")
+    public String testInternationalResourceView(){
+
+        return "forward:/test/model";
+    }
 
 
 }
