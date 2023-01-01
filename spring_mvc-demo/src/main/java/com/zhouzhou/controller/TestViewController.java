@@ -24,5 +24,10 @@ public class TestViewController {
         return "forward:/test/model";
     }
 
+    @RequestMapping("/test/view/redirect")
+    public String testRedirectView(){
+        return "redirect:/test/model";
+    }
+
 
 }
