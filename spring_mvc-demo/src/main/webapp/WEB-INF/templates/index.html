@@ -22,6 +22,13 @@
     <a th:href="@{/aaa/test/ant}">测试@RequestMappping注解的支持ant风格的路径</a>
     <br>
     <a th:href="@{/test/rest/kakxi/1}">测试@RequestMappping注解的value属性的占位符</a>
+    <hr>
+
+    <form th:action="@{/param/pojo}" method="post">
+        用户名:<input type="text" name="username"><br>
+        密码:<input type="password" name="password"><br>
+        <input type="submit" value="登录"><br>
+    </form>
 
 </body>
 </html>
