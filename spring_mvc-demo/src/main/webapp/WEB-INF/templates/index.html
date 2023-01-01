@@ -7,6 +7,15 @@
 <body>
     <h1>index.html</h1>
     <a th:href="@{/test/hello}">测试@RequestMapping注解的具体位置</a>
+    <br>
+    <a th:href="@{/test/abc}">测试@RequestMapping注解的value属性</a>
+    <br>
+
+    <form th:href="@{/hello}" method="post">
+        <input type="submit" value="测试@RequestMappping注解的method属性">
+    </form>
+
+
 
 </body>
 </html>
