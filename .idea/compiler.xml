@@ -11,6 +11,7 @@
         <module name="spring-proxy" />
         <module name="mybatis_helloworld" />
         <module name="spring_mvc_helloworld" />
+        <module name="spring_mvc_rest" />
         <module name="spring-transaction" />
         <module name="spring_mvc-demo" />
         <module name="mybatis_parameter" />
@@ -37,6 +38,7 @@
       <module name="spring_ioc_xml" target="1.8" />
       <module name="spring_mvc-demo" target="1.8" />
       <module name="spring_mvc_helloworld" target="1.8" />
+      <module name="spring_mvc_rest" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
