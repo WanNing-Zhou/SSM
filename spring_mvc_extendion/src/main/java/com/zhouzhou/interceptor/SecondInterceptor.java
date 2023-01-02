@@ -20,6 +20,10 @@ import javax.servlet.http.HttpServletResponse;
  * 多个拦截器的执行顺序和在SpringMVC配置文件中配置的顺序有关
  * preHandle()按照配置的顺序执行,而postHandle()和afterCompletion()会按照配置的反序执行
  *
+ * 若拦截器中有某个拦截器的preHandle()返回了false,
+ * 拦截器preHandel()返回false和他之前的拦截器的preHandle()都会执行
+ * 所有的拦截器的postHandle()都不执行
+ * 拦截器preHandel()返回false之前的拦截器的afterCompletion()都会执行
  */
 
 @Component
