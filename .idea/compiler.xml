@@ -10,6 +10,7 @@
         <module name="spring_annotation" />
         <module name="spring-proxy" />
         <module name="mybatis_helloworld" />
+        <module name="spring_listener" />
         <module name="spring_mvc_ajax" />
         <module name="spring_mvc_helloworld" />
         <module name="spring_mvc_annotation" />
@@ -39,6 +40,7 @@
       <module name="spring_annotation" target="1.8" />
       <module name="spring_helloworld" target="1.8" />
       <module name="spring_ioc_xml" target="1.8" />
+      <module name="spring_listener" target="1.8" />
       <module name="spring_mvc-demo" target="1.8" />
       <module name="spring_mvc_ajax" target="1.8" />
       <module name="spring_mvc_annotation" target="1.8" />
