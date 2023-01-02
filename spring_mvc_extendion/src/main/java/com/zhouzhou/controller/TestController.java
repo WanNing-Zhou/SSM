@@ -1,6 +1,5 @@
 package com.zhouzhou.controller;
 
-import org.graalvm.compiler.debug.PathUtilities;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -14,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class TestController {
     @RequestMapping("/test/hello")
-    @ResponseBody
+//    @ResponseBody
     public String testHello() {
         return "success";
     }
