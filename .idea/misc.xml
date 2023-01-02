@@ -2,6 +2,7 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/spring_mvc-demo" />
+    <file type="web" url="file://$PROJECT_DIR$/spring_mvc_ajax" />
     <file type="web" url="file://$PROJECT_DIR$/spring_mvc_helloworld" />
     <file type="web" url="file://$PROJECT_DIR$/spring_mvc_rest" />
   </component>
@@ -23,6 +24,7 @@
         <option value="$PROJECT_DIR$/spring_mvc_helloworld/pom.xml" />
         <option value="$PROJECT_DIR$/spring_mvc-demo/pom.xml" />
         <option value="$PROJECT_DIR$/spring_mvc_rest/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_mvc_ajax/pom.xml" />
       </list>
     </option>
   </component>
