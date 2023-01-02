@@ -56,20 +56,33 @@
 
 <!--    <bean id="firstInterceptor" class="com.zhouzhou.interceptor.FirstInterceptor"></bean>-->
 
-    <mcv:interceptors>
-<!--       <bean class="com.zhouzhou.interceptor.FirstInterceptor"/>-->
-<!--        <ref bean="firstInterceptor"></ref>-->
-        <!--bean和ref标签所配置的拦截器默认对DispatcherServlet处理的所有的请求进行拦截-->
-<!--        <mvc:interceptor>-->
-<!--            &lt;!&ndash;配置需要拦截的请求的请求路径 /**表示所有请求&ndash;&gt;-->
-<!--            <mvc:mapping path="/**"/>-->
-<!--            &lt;!&ndash;配置需要排除拦截的请求的请求路径&ndash;&gt;-->
-<!--            <mvc:exclude-mapping path="/abc"/>-->
-<!--            <ref bean="firstInterceptor"></ref>-->
-<!--           -->
-<!--        </mvc:interceptor>-->
-        <ref bean="firstInterceptor"/>
-        <ref bean="secondInterceptor"/>
-    </mcv:interceptors>
+<!--    <mcv:interceptors>-->
+<!--&lt;!&ndash;       <bean class="com.zhouzhou.interceptor.FirstInterceptor"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <ref bean="firstInterceptor"></ref>&ndash;&gt;-->
+<!--        &lt;!&ndash;bean和ref标签所配置的拦截器默认对DispatcherServlet处理的所有的请求进行拦截&ndash;&gt;-->
+<!--&lt;!&ndash;        <mvc:interceptor>&ndash;&gt;-->
+<!--&lt;!&ndash;            &lt;!&ndash;配置需要拦截的请求的请求路径 /**表示所有请求&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            <mvc:mapping path="/**"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            &lt;!&ndash;配置需要排除拦截的请求的请求路径&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            <mvc:exclude-mapping path="/abc"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <ref bean="firstInterceptor"></ref>&ndash;&gt;-->
+<!--&lt;!&ndash;           &ndash;&gt;-->
+<!--&lt;!&ndash;        </mvc:interceptor>&ndash;&gt;-->
+<!--        <ref bean="firstInterceptor"/>-->
+<!--        <ref bean="secondInterceptor"/>-->
+<!--    </mcv:interceptors>-->
+    
+<!--    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">-->
+<!--        <property name="exceptionMappings">-->
+<!--            <props>-->
+<!--                &lt;!&ndash;key设置处理的异常,value设置出现该异常时要跳转的页面所对应的逻辑视图&ndash;&gt;-->
+<!--                <prop key="java.lang.ArithmeticException">error</prop>-->
+<!--                -->
+<!--            </props>-->
+<!--        </property>-->
+<!--        &lt;!&ndash;设置共享在请求域中的异常信息的属性名&ndash;&gt;-->
+<!--        <property name="exceptionAttribute" value="ex"></property>-->
+<!--        -->
+<!--    </bean>-->
 
 </beans>
