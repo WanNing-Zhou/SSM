@@ -36,6 +36,8 @@ import java.util.Map;
  * map->json对象
  * list->json数组
  *
+ * @RestController 相当于@Controller + @ResponseBody
+ *
  */
 @Controller
 public class TestAjaxController {

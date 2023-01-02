@@ -11,6 +11,14 @@
     <input type="button" value="使用@RequestBodu注解处理json格式的请求参数" @click="testRequestBody()">
     <a th:href="@{/test/responsebody}">使用@responsebody注解响应</a>
     <input type="button" value="测试使用@ResponseBody注解响应json格式数据" @click="testResponseBody()">
+    <a th:href="@{/test/doen}">下载图片</a>
+    <br>
+    <form th:action="@{/test/up}" method="post" enctype="multipart/form-data">
+        头像:<input type="file" name="photo"><br>
+        <input type="submit" value="文件上传">
+
+    </form>
+
 
 </div>
 
