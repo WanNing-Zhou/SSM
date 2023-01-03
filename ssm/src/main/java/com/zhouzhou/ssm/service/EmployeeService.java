@@ -1,5 +1,7 @@
 package com.zhouzhou.ssm.service;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageInfo;
 import com.zhouzhou.ssm.pojo.Employee;
 
 import java.util.List;
@@ -16,5 +18,7 @@ public interface EmployeeService {
      *查询所有的员工信息
      */
     List<Employee> getAllEmployee();
+
+   PageInfo<Employee> getEmployeePage(Integer pageNumber);
 
 }
