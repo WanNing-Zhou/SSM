@@ -1,5 +1,9 @@
 package com.zhouzhou.ssm.service;
 
+import com.zhouzhou.ssm.pojo.Employee;
+
+import java.util.List;
+
 /**
  * @author 周万宁
  * @className EmployeeService
@@ -7,4 +11,10 @@ package com.zhouzhou.ssm.service;
  * @description
  */
 public interface EmployeeService {
+
+    /**
+     *查询所有的员工信息
+     */
+    List<Employee> getAllEmployee();
+
 }
